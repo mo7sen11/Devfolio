@@ -1,0 +1,421 @@
+/* general style */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.bg-myblack {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.bg-mysecondery {
+  background-color: #f5f5f5;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-28 {
+  font-size: 28px;
+}
+.fs-50 {
+  font-size: 50px;
+}
+.fs-60 {
+  font-size: 60px;
+}
+.services .underline::before,
+.blog .underline::before,
+.work .underline ::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50px;
+  height: 5px;
+  background-color: #0078ff;
+}
+/* header and navbar style */
+header {
+  background-image: url(../images/hero-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+}
+header::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(4, 4, 4, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+ul > li a {
+  position: relative;
+}
+ul > li a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  transition: 0.5s ease all;
+}
+ul > li:hover a::before {
+  width: 90%;
+  visibility: visible;
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+}
+
+.animation::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: word;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes word {
+  2% {
+    content: "|";
+  }
+  2% {
+    content: "D|";
+  }
+  4% {
+    content: "De|";
+  }
+  6% {
+    content: "Des|";
+  }
+  8% {
+    content: "Desg|";
+  }
+  10% {
+    content: "Desgi|";
+  }
+  12% {
+    content: "Desgin|";
+  }
+  14% {
+    content: "Desgine|";
+  }
+  16% {
+    content: "Desginer|";
+  }
+  18% {
+    content: "Desgine|";
+  }
+  20% {
+    content: "Desgin|";
+  }
+  22% {
+    content: "Desgi|";
+  }
+  24% {
+    content: "Desg|";
+  }
+  26% {
+    content: "Des|";
+  }
+  28% {
+    content: "De|";
+  }
+  30% {
+    content: "Dev|";
+  }
+  32% {
+    content: "Deve|";
+  }
+  34% {
+    content: "Devel|";
+  }
+  36% {
+    content: "Develo|";
+  }
+  38% {
+    content: "Develop|";
+  }
+  40% {
+    content: "Develope|";
+  }
+  42% {
+    content: "Developer|";
+  }
+  44% {
+    content: "Develope|";
+  }
+  46% {
+    content: "Develop|";
+  }
+  48% {
+    content: "Develo|";
+  }
+  50% {
+    content: "Develo|";
+  }
+  52% {
+    content: "Devel|";
+  }
+  54% {
+    content: "Deve|";
+  }
+  56% {
+    content: "Dev|";
+  }
+  58% {
+    content: "De|";
+  }
+  60% {
+    content: "D|";
+  }
+  62% {
+    content: "|";
+  }
+  64% {
+    content: "F|";
+  }
+  66% {
+    content: "Fr|";
+  }
+  68% {
+    content: "Fre|";
+  }
+  70% {
+    content: "Free|";
+  }
+  72% {
+    content: "Freel|";
+  }
+  74% {
+    content: "Freela|";
+  }
+  76% {
+    content: "Freelan|";
+  }
+  78% {
+    content: "Freelanc|";
+  }
+  80% {
+    content: "Freelance|";
+  }
+  82% {
+    content: "Freelancer|";
+  }
+  84% {
+    content: "Freelance|";
+  }
+  86% {
+    content: "Freelanc|";
+  }
+  88% {
+    content: "Freelan|";
+  }
+  90% {
+    content: "Freela|";
+  }
+  92% {
+    content: "Freel|";
+  }
+  94% {
+    content: "Free|";
+  }
+  96% {
+    content: "Fre|";
+  }
+  98% {
+    content: "Fr|";
+  }
+  99% {
+    content: "F|";
+  }
+  100% {
+    content: "|";
+  }
+}
+/* about style */
+.section2 article h2::after {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 4px;
+  left: 0;
+  bottom: 0px;
+  background-color: #0078ff;
+}
+.skills .skill .progress {
+  height: 0.7rem;
+  background-color: #cde1f8;
+  border-radius: 0;
+}
+.skills .skill .progress span {
+  background-color: #0078ff;
+}
+
+/* services style */
+.icon {
+  border: 8px solid #0078ff;
+  transition: 0.5s ease all;
+}
+.icons i {
+  width: 35px;
+  height: 35px;
+}
+.card:hover .icon {
+  border: 8px solid #bfdbfa;
+  background-color: #0078ff;
+  color: white;
+}
+/* counters style */
+.counters {
+  background-image: url(../images/counters-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.counters::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+.counters .item i {
+  border: 7px solid #bfdbfa;
+  width: 90px;
+  height: 90px;
+  font-size: 30px;
+}
+/* portfolio style */
+.fa-circle-plus {
+  color: #0078ff;
+  background-color: white;
+}
+.colored {
+  color: #0078ff;
+}
+.work .row .outer .inner img {
+  transition: 1s ease all;
+}
+.work .row .outer:hover .inner img {
+  transform: scale(1.1);
+}
+/* overlay style */
+.overlay {
+  background-attachment: fixed;
+  background-image: url(../images/overlay-bg.jpg);
+  position: relative;
+}
+.overlay::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0078ff;
+  opacity: 0.7;
+}
+.overlay .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.overlay .active::after {
+  display: none;
+}
+
+/* blog style  */
+.travel-badge {
+  width: fit-content;
+  background-color: #0078ff;
+  padding: 5px 15px;
+}
+.blog h1 a {
+  color: black;
+  transition: 0.5s ease color;
+}
+.blog h1 a:hover {
+  color: #0078ff;
+}
+
+.card-footer .image img {
+  width: 30px;
+  height: 30px;
+}
+.card-footer .image span {
+  transition: 0.5s ease color;
+}
+.card-footer .image:hover span {
+  color: #0078ff;
+}
+/* contact style  */
+.contact {
+  background-attachment: fixed;
+  background-image: url(../images/overlay-bg.jpg);
+  position: relative;
+}
+
+.contact::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0078ff;
+  opacity: 0.8;
+}
+.contact h2::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 4px;
+  width: 25%;
+  bottom: 0;
+  background-color: #0078ff;
+}
+.contact .touch ul li i {
+  color: #0078ff;
+}
+.contact .touch .icons i {
+  border: 4px solid #0078ff;
+  transition: 0.8s ease all;
+  border-radius: 50%;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+.contact .touch .icons i:hover {
+  border: 4px solid #bfdbfa;
+  background-color: #0078ff;
+  color: white;
+}
